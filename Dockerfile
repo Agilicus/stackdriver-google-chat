@@ -7,7 +7,7 @@ RUN pip install -r /tmp/requirements.txt
 
 FROM python:3.8.5-slim
 COPY --from=build /usr/local/lib/python3.8/site-packages/ /usr/local/lib/python3.8/site-packages
-COPY --from=build /usr/local/bin/* /usr/local/bin/
+COPY --from=build /usr/local/bin /usr/local/bin
 COPY run.py /app/
 RUN adduser --gecos '' --disabled-password --shell /bin/false webhook \
  && chown -R webhook:webhook /app
