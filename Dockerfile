@@ -1,11 +1,11 @@
-FROM python:3.8.5-slim as build
+FROM python:3.8.6-slim as build
 
 RUN apt-get update && \
     apt-get -y install build-essential
 COPY requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
 
-FROM python:3.8.5-slim
+FROM python:3.8.6-slim
 COPY --from=build /usr/local/lib/python3.8/site-packages/ /usr/local/lib/python3.8/site-packages
 COPY --from=build /usr/local/bin /usr/local/bin
 COPY run.py /app/
