@@ -1,4 +1,4 @@
-# stackdriver-google-chat
+## stackdriver-google-chat
 
 Convert from a Stackdriver webhook into a Google Chat format
 
@@ -16,16 +16,16 @@ An incident will be notified as:
         "policy_name": "api - noc - users",
         "resource": {
             "labels": {
-                "host": "api.agilicus.com"
+                "host": "MYHOST"
             },
             "type": "uptime_url"
         },
         "resource_id": "",
-        "resource_name": "agilicus Uptime Check URL labels {host=api.agilicus.com}",
+        "resource_name": "Uptime Check URL labels {host=MYHOST}",
         "started_at": 1579559444,
         "state": "open",
-        "summary": "An uptime check on agilicus Uptime Check URL labels {host=api.agilicus.com} is failing.",
-        "url": "https://app.google.stackdriver.com/incidents/0.ligwyr056k2l?project=agilicus"
+        "summary": "An uptime check on Uptime Check URL labels {host=MYHOST} is failing.",
+        "url": "https://app.google.stackdriver.com/incidents/0.ligwyr056k2l?project=XXXX"
     },
     "version": "1.2"
 }
@@ -41,16 +41,16 @@ And return to health:
         "policy_name": "api - noc - users",
         "resource": {
             "labels": {
-                "host": "api.agilicus.com"
+                "host": "MYHOST"
             },
             "type": "uptime_url"
         },
         "resource_id": "",
-        "resource_name": "agilicus Uptime Check URL labels {host=api.agilicus.com}",
+        "resource_name": "Uptime Check URL labels {host=MYHOST}",
         "started_at": 1579559444,
         "state": "closed",
-        "summary": "The uptime check for agilicus Uptime Check URL labels {host=api.agilicus.com} has returned to a normal state.",
-        "url": "https://app.google.stackdriver.com/incidents/0.ligwyr056k2l?project=agilicus"
+        "summary": "The uptime check for Uptime Check URL labels {host=MYHOST} has returned to a normal state.",
+        "url": "https://app.google.stackdriver.com/incidents/0.ligwyr056k2l?project=XXXX"
     },
     "version": "1.2"
 }
